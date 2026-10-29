@@ -14,6 +14,7 @@ Slop Sentry checks writing drafts for thin claims, try-hard or hokey language, a
 │   └── plugins/
 │       └── slop-sentry/
 │           ├── .claude-plugin/
+│           │   ├── icon.png               # 512x512 plugin listing icon
 │           │   └── plugin.json            # Plugin manifest and metadata
 │           ├── .mcp.json                  # Remote MCP server configuration (https://mcp.slopsentry.ai)
 │           └── skills/
@@ -30,7 +31,8 @@ Slop Sentry checks writing drafts for thin claims, try-hard or hokey language, a
 
 - **`claude-marketplace/`**: The Claude marketplace catalog. It defines the marketplace structure and points to the `slop-sentry` plugin inside `plugins/slop-sentry`.
 - **`claude-marketplace/plugins/slop-sentry/`**: The plugin source directory submitted to the Claude plugin directory. It includes:
-  - `.claude-plugin/plugin.json`: Plugin description, version, and author metadata.
+  - `.claude-plugin/icon.png`: 512×512 square PNG icon for the Claude plugin directory.
+  - `.claude-plugin/plugin.json`: Plugin description, version, privacy policy URL, and author metadata.
   - `.mcp.json`: Configures the remote MCP endpoint (`https://mcp.slopsentry.ai`).
   - `skills/slop-sentry`: The primary workflow skill for drafting, editing, quality checks, substance checks, hokiness checks, and visual diff reviews.
   - `skills/install-slop-sentry`: Setup instructions for connecting the MCP server to supported local and desktop clients.
